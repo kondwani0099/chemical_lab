@@ -324,7 +324,7 @@ def display_reaction_info(reactants, reaction_info):
 
 
 def main():
-    st.title("Chemical Lab")
+    st.title("Chemical Simulator")
 
     # User input
     # first_element = st.selectbox("Select the first element:", elements)
