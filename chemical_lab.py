@@ -1,13 +1,26 @@
 import streamlit as st
 
-# st.markdown(
-#     """
-#     <style>
-#     {% include 'styles.css' %}
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
+# Custom HTML code for the head section
+custom_head_html = """
+<head>
+    <!-- Your custom HTML code goes here -->
+    <title>Chemical Lab</title>
+    <meta name="description" content="chemical lab for experiments">
+    <!-- Add more custom meta tags, stylesheets, scripts, etc. -->
+            <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RT67Y28Q1H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RT67Y28Q1H');
+</script>
+</head>
+"""
+
+# Streamlit app title
+st.markdown(custom_head_html, unsafe_allow_html=True)
 # Elements list
 elements = [
     'H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'H20','O2','Ne','HCl',
@@ -334,7 +347,7 @@ def main():
 if __name__ == "__main__":
     main()
 # def main():
-#     st.title("Chemical Lab")
+#     st.title("Chemical Simulator")
 
 #     # User input
 #     first_element = st.selectbox("Select the first element:", [element.capitalize() for element in elements])
